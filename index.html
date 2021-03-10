@@ -77,22 +77,22 @@
     controls.enableZoom = true;
     controls.maxPolarAngle = Math.PI / 2;
     controls.minDistance = 500;
-    controls.maxDistance = 10000;
+    controls.maxDistance = 15000;
 
 
-    // var keyLight = new THREE.DirectionalLight(0x999999, 1.0);
-    // keyLight.position.set(-100, -100, 100);
+    var keyLight = new THREE.DirectionalLight(0x999999, 1.0);
+    keyLight.position.set(-100, -100, 100);
 
-    // var fillLight = new THREE.DirectionalLight(0xD3D3D3, 1.0);
-    // fillLight.position.set(-100, 0, 100);
+    var fillLight = new THREE.DirectionalLight(0xD3D3D3, 1.0);
+    fillLight.position.set(-100, 0, 100);
 
      var backLight = new THREE.DirectionalLight(0xffffff, 1.0);
      backLight.position.set(100, 0, -100).normalize();
 
 
-    // scene.add(keyLight);
-    // scene.add(fillLight);
-     scene.add(backLight);
+    scene.add(keyLight);
+    scene.add(fillLight);
+    scene.add(backLight);
 
 
     var mtlLoader = new THREE.MTLLoader();
